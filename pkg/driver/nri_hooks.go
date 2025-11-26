@@ -168,11 +168,6 @@ func (cp *CPUDriver) CreateContainer(_ context.Context, pod *api.PodSandbox, ctr
 		setSharedCPUUpdateRequired(false)
 	}
 
-	if isSharedCPUUpdateRequired() {
-		updates = cp.getSharedContainerUpdates(containerId)
-		setSharedCPUUpdateRequired(false)
-	}
-
 	return adjust, updates, nil
 }
 
