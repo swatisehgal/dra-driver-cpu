@@ -391,7 +391,7 @@ func formatAffinityMask(mask string) string {
 func parseInt(str string) int {
 	val, err := strconv.Atoi(str)
 	if err != nil {
-		panic(err)
+		return -1
 	}
 	return val
 }
